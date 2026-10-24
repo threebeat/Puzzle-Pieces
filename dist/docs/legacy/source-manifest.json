@@ -1,0 +1,37 @@
+{
+  "captured": "2026-10-24",
+  "scope": "Recovered local source snapshots; the shared-chat URL could not be retrieved. These files are archived reference material, not current game content.",
+  "sources": [
+    {
+      "name": "Three-room point-and-click prototype",
+      "url": "https://puzzle-pieces-museum.johnmoore2048.chatgpt.site",
+      "commit": "7883e0aa63053e9ff4e7d711269c362000306c62"
+    },
+    {
+      "name": "Earlier 3D museum / Modern Art",
+      "url": "https://modern-art.johnmoore2048.chatgpt.site",
+      "commit": "81c759b4db1a68555a6fa346586d323bd94d5976"
+    }
+  ],
+  "files": {
+    "source/three-room/core.mjs": "431a0a25382aee0aa791631aa13e1fdded1bbff910c1cd5648562d05cbb677f4",
+    "source/three-room/app.mjs": "2d8999a59c6c9bf81699e099950fdac3d98ac977b1ece0b4f3ae74ae4031af19",
+    "source/three-room/art.mjs": "92b8ff0d0a8042b09b4bf5a207cefd32eaed668c08ecf8c3ff9e0a24be85703b",
+    "source/three-room/README-original.md": "185f296ad1827b72997a24af0fb1f29347bac471b1c85042ea63e64a6a611c7c",
+    "source/3d-museum/layout.js": "8e008d620cc0c280ede76bcdd9fd89356a1436c9a974b0d96d47e76a9504c478",
+    "source/3d-museum/expansion-paper.js": "cf6183c019359be72ea34f8bee73f35aabc850022478114aa1524e0be5689d67",
+    "source/3d-museum/art.js": "f620b84eb597c0366399893e79e25fa94e8eb427d312e1dcddb49b4d238fe3e9",
+    "source/3d-museum/VISUAL-REFERENCES.md": "07678b92c46b3d1055a6e0fd123b79b0e57a6432bcb64702bc537f5bc18e71f2",
+    "source/3d-museum/staff-content.js": "ee026d7e8d41a4e12cd8f97bccc71013c99709ffb29ca0fb0eac9e686016800a",
+    "source/3d-museum/logic.js": "b64e78f089587cba40e5179ad6657179e4960dbf39b4d816bb5fe544dda696fa",
+    "source/3d-museum/expansion-data.js": "a5361fbbd3749aa61d05b15c230e93e9a5cbccf8c3fb1d51fdc716682a991fe6",
+    "source/3d-museum/EXHIBIT-ROADMAP.md": "db3bcd6a1fcf9be23e897bac4a9664b041c86fd7e5eb0e64f0a935c2028e3003",
+    "source/3d-museum/guide-data.js": "0c491efcc74fd6a863c41217e003400910f8455057d9967db0a158932ab08842",
+    "source/3d-museum/language-data.js": "b8178a697bdddafc9e5b71812d1a53c052efb8ef543fab3ca8374adb08bd5703",
+    "source/3d-museum/PUZZLE-DESIGN.md": "490a9129eaf3616682fb0c33b816f7a1fd33ec6fa59874a1fbfe1a17bbb399a8",
+    "source/3d-museum/collection-data.js": "69aaaba01d7c5575b048c6bb82dde12b1e74b49f665a6f72c1a9fe4037108b6e",
+    "source/3d-museum/README-original.md": "672ba103d5d3474651d3c24f7abc3857fe3a002e9f20f6784804b07145799404",
+    "source/3d-museum/language-paper.js": "95b1f6a2a4c66a73c7ee7f4eb2ede33bb6c7090e36ced0f388bd6b976d0fdb34",
+    "source/3d-museum/author-atlas-original.md": "ef6f4fef37363f059809f0296131affd0276cb9e5350b761e45696bdff912607"
+  }
+}

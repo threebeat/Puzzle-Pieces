@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#e7e3d8"><meta name="description" content="Enter Puzzle Pieces, a mysterious museum where the art will become the puzzles. Explore the opening halls and galleries."><title>Puzzle Pieces — A museum waiting to be understood</title><link rel="stylesheet" href="style.css"></head>
+<body>
+ <canvas id="world" aria-label="The museum. Use WASD to walk and drag to look around."></canvas>
+ <div id="loading"><span class="eyebrow">PUZZLE PIECES</span><span class="load-line"></span><p>Opening the museum…</p></div>
+ <div id="failure" hidden><h1>The museum could not open.</h1><p id="failure-message"></p><button onclick="location.reload()">Try again</button><a href="docs/">Read the design notebook</a></div>
+ <section id="welcome" hidden>
+  <div class="welcome-top"><a class="wordmark" href="./">P<span class="mark">◒</span>P</a><span class="eyebrow">A MUSEUM WAITING TO BE UNDERSTOOD</span><a href="docs/" class="text-link">Design notebook <span>↗</span></a></div>
+  <div class="welcome-copy"><p class="eyebrow">THE FIRST VISIT</p><h1>Puzzle<br><em>Pieces.</em></h1><p class="intro">Some things only make sense<br>when you stand somewhere else.</p><button id="enter" class="primary">Enter the museum <span>↗</span></button><button id="continue" class="continue" hidden>Continue your visit <span>→</span></button><p class="edition">THE OPENING COLLECTION · A SPACE IN PROGRESS</p></div>
+  <div class="welcome-bottom"><span>01 — HIDDEN OPERATORS<br>02 — DAYS OF REBIRTH<br>03 — CROSS/HATCH</span><span>Take your time.<br>There is no closing hour.</span></div>
+ </section>
+ <main id="hud" hidden>
+  <header class="hud-top"><button id="menu-btn" class="brand-btn" aria-label="Open menu">P<span>◒</span>P</button><div class="location"><span id="loc-exhibit">THE MUSEUM</span><strong id="loc-room">The Main Hall</strong></div><div class="hud-actions"><button id="map-btn" aria-label="Open museum map"><span>⌘</span> Map <kbd>M</kbd></button><button id="sound-btn" aria-label="Enable ambient sound" aria-pressed="false">Sound off</button><button id="fullscreen-btn" aria-label="Toggle fullscreen">⛶</button></div></header>
+  <div id="reticle" aria-hidden="true"></div><button id="interact" hidden><span id="interact-label">Inspect</span><kbd>E</kbd></button>
+  <div class="hud-bottom"><span id="floor-label">GROUND FLOOR <b>00</b></span><span id="view-mode" hidden>PLAN VIEW</span><span class="desktop-hint">W A S D &nbsp; walk &nbsp; · &nbsp; drag to look &nbsp; · &nbsp; E inspect</span><button id="help-btn" aria-label="Movement help">?</button></div>
+  <div id="touch-move" aria-label="Movement joystick"><div id="touch-stick"></div><span>WALK</span></div><span id="touch-look">Drag to look</span>
+  <div id="toast" role="status"></div>
+ </main>
+ <dialog id="panel" aria-labelledby="panel-title"><div class="panel-head"><span id="panel-kicker" class="eyebrow"></span><button id="close-panel" aria-label="Close">×</button></div><h2 id="panel-title"></h2><div id="panel-body"></div></dialog>
+ <script type="module" src="app.mjs"></script>
+</body></html>

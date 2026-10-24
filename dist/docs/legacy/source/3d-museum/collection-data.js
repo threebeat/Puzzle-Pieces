@@ -1,0 +1,66 @@
+// Original collection. Names, works and catalogue prose are fictional.
+// Placement deliberately avoids the existing puzzle surfaces and controls.
+const PI=Math.PI;
+const catalogue=[
+ ['A lake without a shore','Iona Vale','field','Oil and cold wax on linen','Color settles here without agreeing to become a landscape. The pale interval was left by a brush that never touched the canvas.'],
+ ['The room after rain','Mara Venn','gesture','Acrylic and graphite on canvas','A room is remembered by the directions in which its sounds once moved. These marks record neither the rain nor the room.'],
+ ['Against an afternoon','Elias Rook','construct','Gouache and cut paper','A disc, a bar, and an inclination are sufficient to postpone an afternoon. The composition refuses a stable horizon.'],
+ ['Nearly here','Selene Orra','veil','Pigment and transparent ground','Successive veils preserve a shape while making its edges less certain. What appears nearest was painted first.'],
+ ['A field of small decisions','Tavi Moss','point','Ink on cotton paper','No dot was assigned a destination. The field develops a pressure of its own, made from thousands of small and unequal decisions.'],
+ ['Folded weather','Ada Senn','collage','Torn paper and tinted gesso','The folds belong to several incompatible climates. Their temporary agreement gives the work its depth.'],
+ ['A line kept awake','Nico Ard','contour','Graphite and egg tempera','An unbroken contour describes an object that has never existed. The drawing rests only where its line changes direction.'],
+ ['Minutes for an absent meeting','Etta Muir','weave','Ink and linen strips','Vertical and horizontal voices occupy the same table. Their interruptions are retained as part of the record.'],
+ ['The chair remembers','Oren Pell','erase','Charcoal and rubbed plaster','An image was removed until its absence became heavier than the original. The surface carries the marks of every attempt to tidy it.'],
+ ['Permission to drift','Iona Vale','arc','Casein on panel','Several curves share a center that lies outside the painting. Their association is a matter of distance rather than agreement.'],
+ ['A settlement of shadows','Mara Venn','relief','Painted timber relief','Shallow forms exchange their depth with the passing light. The work changes most when the viewer stands still.'],
+ ['Nothing discussed','Elias Rook','stripe','Enamel on aluminum','Bands accumulate at unequal intervals. The larger silences are as deliberate as the narrowest edge.'],
+ ['Paper harbor','Selene Orra','collage','Collage and mineral pigment','A harbor is assembled from scraps with no common shoreline. Each piece arrived carrying a different idea of scale.'],
+ ['A pocket of blue','Tavi Moss','field','Oil on paper','A small color attempts to hold a much larger distance. Its neighbors do not assist it.'],
+ ['Display for a disappearing thing','Ada Senn','construct','Screenprint and hand coloring','The arrangement resembles a useful diagram whose subject has been carefully removed. Only its confidence remains.'],
+ ['What a frame cannot keep','Nico Ard','gesture','Ink and acrylic on canvas','The brush crosses the picture boundary before returning. The frame records a pause rather than a limit.'],
+ ['Night inventory','Etta Muir','point','Graphite and dry pigment','Particles collect in the lower half of the work, as though light itself could be counted after closing time.'],
+ ['A slow interference','Oren Pell','wave','Lithograph on paper','Two systems of curves pass through one another without sharing a rhythm. The moving bands exist in the viewer’s eye.'],
+ ['The unused margin','Iona Vale','erase','Charcoal and chalk','A margin gradually occupies the entire sheet. A few traces of the former center remain at its edges.'],
+ ['Tender machinery','Mara Venn','weave','Dye and stitched cotton','A soft grid is repeatedly repaired. The additions preserve the rhythm of a fabric that was never complete.'],
+ ['Territory of a curve','Elias Rook','arc','Tempera on board','Arcs are cut short before they can make an enclosure. The open ends leave the composition available to the room.'],
+ ['Long division of dusk','Selene Orra','stripe','Oil and metallic leaf','The interval between two dark bands widens slowly across the panel. No horizon is declared.'],
+ ['Sediment for an interior','Tavi Moss','contour','Ink wash and pencil','Layers press against one another until their boundaries resemble a place. The work is a section through accumulated attention.'],
+ ['Other rooms, folded','Ada Senn','collage','Found paper and paint','Fragments of interiors are rearranged without restoring their former rooms. The creases remain as evidence of travel.'],
+ ['Soft monument','Nico Ard','relief','Plaster and earth pigment','A small relief borrows the posture of a monument. Its recesses give more space to shadow than to material.'],
+ ['A theory of pale light','Etta Muir','veil','Glazed acrylic on linen','Thin layers change the color beneath them while leaving it visible. Nothing in the painting can be seen entirely alone.'],
+ ['Low frequency garden','Oren Pell','wave','Silkscreen on paper','Repeated curves gather into an apparent growth. The image moves without depicting anything that could move.'],
+ ['Where the green ends','Iona Vale','field','Oil and wax on canvas','A dark field narrows into an edge too soft to locate. The neighboring color receives it without a boundary.'],
+ ['Some weight, carried','Mara Venn','construct','Cut board and matte pigment','The shapes appear suspended between resting and falling. Their imbalance is held by a carefully empty center.'],
+ ['Trace of a gesture','Elias Rook','gesture','Ink on sized paper','One movement is attempted several times. Its repetitions retain the hesitation that a single confident mark would conceal.'],
+ ['Air between surfaces','Selene Orra','relief','Painted wood and plaster','The narrow spaces between the elements behave like another material. Light makes this invisible component briefly measurable.'],
+ ['Unfinished conversation','Tavi Moss','weave','Woven paper and ink','Two sets of strands occupy one surface without arriving together. The loose ends are part of the conversation.'],
+ ['A white noise of flowers','Ada Senn','point','Acrylic dots on linen','Dense marks suggest a bloom and then scatter it. The image is held between recognition and its refusal.'],
+ ['An available distance','Nico Ard','arc','Graphite and oil ground','The center of the drawing remains unoccupied. Curves make its absence feel intentional.'],
+ ['The shape of leaving','Etta Muir','erase','Charcoal, chalk and abrasion','The surface is worked until removal becomes an additive process. The last pale mark was made by taking something away.'],
+ ['Morning stored sideways','Oren Pell','stripe','Enamel and wax on panel','Warm and cool bands are stacked without a hierarchy. A narrow break allows the ground to enter the arrangement.'],
+];
+const spots=[
+ ...[-29,-16,22,28].map(z=>({x:-10.76,z,rot:PI/2,w:2.5,h:2.0,y:3.1,area:'Main hall'})),
+ ...[-17,-8,6].map(z=>({x:7.76,z,rot:-PI/2,w:2.7,h:2.1,y:3.2,area:'Main hall'})),
+ ...[-4,0].map(x=>({x,z:38.25,rot:0,w:2.3,h:1.8,y:3,area:'Conference room'})),
+ ...[42,48,51].map(z=>({x:-6.75,z,rot:PI/2,w:1.9,h:1.6,y:2.9,area:'Conference room'})),
+ ...[14,20].map(z=>({x:19.76,z,rot:-PI/2,w:2.4,h:1.8,y:3.1,area:'Gift shop'})),
+ ...[12,16].map(x=>({x,z:10.25,rot:0,w:2.2,h:1.7,y:3.0,area:'Gift shop'})),
+ ...[28,34,41,48,55,62,69].map(z=>({x:22.24,z,rot:PI/2,w:2.5,h:1.8,y:8.55,area:'Employee upper corridor'})),
+ ...[44,51,58,65,72].map(z=>({x:25.76,z,rot:-PI/2,w:2.4,h:1.8,y:8.55,area:'Employee upper corridor'})),
+ ...[-4.9,1,18,23].map(x=>({x,z:54.24,rot:0,w:2.3,h:1.7,y:2.65,area:'South service hall'})),
+ ...[0,5,8,24].map(x=>({x,z:59.76,rot:PI,w:2.1,h:1.6,y:2.65,area:'South service hall'})),
+];
+export const COLLECTION_ART=catalogue.map(([title,artist,style,medium,text],i)=>({key:'collection'+String(i+1).padStart(2,'0'),title,artist,style,medium,text,seed:173+i*677,...spots[i]}));
+export const COLLECTION_SCULPTURES=[
+ {key:'marbleAthlete',title:'A body between steps',artist:'Dorian Thale',meta:'2022 | Carved marble | 250 × 100 × 90 cm',text:'A contemporary study of the classical standing figure. The shoulders and hips disagree while one leg accepts the weight of the whole.',kind:'athlete',x:-7,z:-14,rotation:.15},
+ {key:'marbleDrapery',title:'The weight of a garment',artist:'Elena Sore',meta:'2019 | Marble and lime wash | 245 × 105 × 80 cm',text:'Fine folds follow the body; a heavier cloak interrupts them. The missing hands leave the cloth to describe the gesture.',kind:'draped',x:4,z:-14,rotation:-.2},
+ {key:'marbleWitness',title:'Witness without a name',artist:'Dorian Thale',meta:'2021 | Marble on a steel pin | 125 × 72 × 64 cm',text:'The face was modeled as though its subject had just turned toward a distant sound. No identity has been assigned to the witness.',kind:'bust',x:-7,z:1,rotation:.28},
+ {key:'marbleTorso',title:'The part that remained',artist:'Elena Sore',meta:'2020 | Carved marble | 180 × 100 × 72 cm',text:'A fragment made complete by its boundaries. The absent limbs give the torso a direction that a whole figure might not possess.',kind:'fragment',x:4,z:1,rotation:-.24},
+ {key:'marbleBearer',title:'Bearer of an absent vessel',artist:'Leto Ardin',meta:'2023 | Marble | 248 × 110 × 92 cm',text:'The arms retain the posture of carrying something. The space between them is the work’s lightest and most persistent material.',kind:'bearer',x:-7,z:17,rotation:.12},
+ {key:'marbleReturn',title:'The turn before departure',artist:'Leto Ardin',meta:'2024 | Marble and mineral wax | 252 × 108 × 88 cm',text:'A figure turns inside the stillness of its clothing. The feet and the face belong to different moments of the same departure.',kind:'turning',x:4,z:17,rotation:-.18},
+];
+export const COLLECTION_WORKS=Object.fromEntries([
+ ...COLLECTION_ART.map(a=>[a.key,{title:a.title,artist:a.artist,meta:`${2011+a.seed%14} | ${a.medium} | ${Math.round(a.h*100)} × ${Math.round(a.w*100)} cm`,text:a.text}]),
+ ...COLLECTION_SCULPTURES.map(({key,title,artist,meta,text})=>[key,{title,artist,meta,text}]),
+]);
