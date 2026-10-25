@@ -10,7 +10,7 @@ Facing the window, the northern arcade turns left/west and the locked eastern ar
 
 An 11.6 m high room with a floor-to-ceiling northern window, alternating skylight bays and original ring chandeliers. A large abstract bronze sculpture stands in front of the glass. Four smaller Greek-style studies are grouped against the long walls around the hall's middle. Benches, potted ferns, slender columns, and four decorative wall paintings establish the rhythm of a museum without adding puzzle content.
 
-A circular information booth sits at the centre, with a 5.4 m body and a 5.8 m countertop diameter. The hall was widened by 4 m to keep clear routes around it. The monitor and keyboard sit toward the visitor-facing edge. Its monitor connects by a visible copper wire to an old street lamp next to it. The monitor operates that lamp directly; this is a connection demonstration, not a solved-answer gate.
+A ring-shaped information booth sits at the centre, with a 5.4 m body and a 5.8 m countertop diameter. Its 3.2 m clear inner circle is an employee workspace; a 1.3 m opening on the west side lets players enter and leave. A compact work stool sits off the entry line. The hall was widened by 4 m to keep clear routes around it. The monitor and keyboard sit toward the visitor-facing edge. The counter has no solid centre, and its fluting and trim stop at the entrance. Its monitor connects by a visible copper wire to an old street lamp next to it. The monitor operates that lamp directly; this is a connection demonstration, not a solved-answer gate.
 
 The public stair occupies an 8 m extension at the south end. Two 3.2 m wide flights double back around a 7.2 × 3 m turning landing. Each flight has 15 risers over a 6 m run: ground → 2.25 m landing → 4.5 m west mezzanine. The west slab stops at the upper-flight arrival, leaving both flights open overhead. The eastern/lower flight travels south; the western/upper flight returns north. The two mezzanine ledges have no bridge. The eastern side remains inaccessible in this milestone.
 
@@ -23,6 +23,8 @@ These are the implemented Option A plans, generated from the same room and stair
 ![Mezzanine — west arrival, open stairwell and closed east side](../floor-plans/option-a-upper.svg)
 
 ![Return stair — plan and side elevation](../floor-plans/return-stair.svg)
+
+The floor plan now shows the desk opening and open centre. [Signage and wayfinding](09-signage-and-wayfinding.md) records all sign families, mounting rules and circulation clearances.
 
 ## Room schedule
 

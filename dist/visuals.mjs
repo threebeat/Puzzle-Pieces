@@ -45,10 +45,10 @@ export function details(w){
  // Slender column flutes, collars and stepped capitals reuse the existing stone material.
  for(const side of [-1,1])for(const z of [-19,-12,12,26]){for(const yy of [.27,.38,3.76,3.88])w.cyl(side*8.5,yy,z,yy>3?.27:.25,.07,'marble');for(let k=0;k<12;k++){const a=k*PI/6;w.mesh(new T.CylinderGeometry(.012,.012,3.28,5),'marble',side*8.5+Math.cos(a)*.175,2.06,z+Math.sin(a)*.175);}w.box(side*8.5,4.22,z,.8,.1,.8,'limestone');}
  // Fine desk fluting, a keyboard, paper brochures and a weighted pen stand.
- for(let k=0;k<64;k++){const a=k/64*PI*2;w.mesh(new T.CylinderGeometry(.014,.014,.9,5),'oak',Math.cos(a)*(DESK.radius+.005),.66,Math.sin(a)*(DESK.radius+.005));}
- w.box(0,1.315,DESK.monitorZ+.67,.68,.045,.25,'smokedMetal');for(let row=0;row<3;row++)for(let key=0;key<11;key++)w.box(-.29+key*.058,1.34,DESK.monitorZ+.59+row*.065,.046,.012,.045,'limestone');
- for(let i=0;i<3;i++){const b=w.box(-.9+i*.03,1.32+i*.014,DESK.monitorZ+.62,.5,.018,.7,i===2?'olive':'plaster');b.rotation.y=.15;}
- w.cyl(.9,1.31,DESK.monitorZ+.57,.14,.07,'brass');w.tube([[.9,1.34,DESK.monitorZ+.57],[.96,1.61,DESK.monitorZ+.57]],.014,'dark');
+ for(let k=0;k<64;k++){const a=k/64*PI*2;if(Math.cos(a)<0&&Math.abs(Math.sin(a)*DESK.radius)<DESK.openingWidth/2+.05)continue;w.mesh(new T.CylinderGeometry(.014,.014,.9,5),'oak',Math.cos(a)*(DESK.radius+.005),.66,Math.sin(a)*(DESK.radius+.005));}
+ w.box(0,1.315,DESK.monitorZ+.45,.68,.045,.25,'smokedMetal');for(let row=0;row<3;row++)for(let key=0;key<11;key++)w.box(-.29+key*.058,1.34,DESK.monitorZ+.37+row*.065,.046,.012,.045,'limestone');
+ for(let i=0;i<3;i++){const b=w.box(-.9+i*.03,1.32+i*.014,DESK.monitorZ+.20,.5,.018,.7,i===2?'olive':'plaster');b.rotation.y=.15;}
+ w.cyl(.9,1.31,DESK.monitorZ+.20,.14,.07,'brass');w.tube([[.9,1.34,DESK.monitorZ+.20],[.96,1.61,DESK.monitorZ+.20]],.014,'dark');
  // Ring chandeliers gain concentric arms and frosted shades, without extra real-time lights.
  for(const z of [-16,-5,6,17]){const inner=w.mesh(new T.TorusGeometry(.75,.035,6,40),'brass',0,8.45,z);inner.rotation.x=PI/2;for(let k=0;k<8;k++){const a=k*PI/4;w.tube([[Math.cos(a)*.75,8.45,z+Math.sin(a)*.75],[Math.cos(a)*1.4,8.45,z+Math.sin(a)*1.4]],.025,'brass');w.mesh(new T.CylinderGeometry(.17,.23,.18,10),'limestone',Math.cos(a)*1.4,8.8,z+Math.sin(a)*1.4);}}
  // Decorative floor inlay stays clear of the passages.

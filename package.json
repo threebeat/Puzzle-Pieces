@@ -1,12 +1,12 @@
 {
   "name": "puzzle-pieces-foundation",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "description": "The opening architecture of Puzzle Pieces",
   "scripts": {
     "build": "node scripts/build-docs.mjs",
     "test": "node tests/foundation.mjs",
-    "check": "node --check dist/app.mjs && node --check dist/world.mjs && node --check dist/layout.mjs && node --check dist/sculptures.mjs && node --check dist/visuals.mjs && npm test"
+    "check": "node --check dist/app.mjs && node --check dist/world.mjs && node --check dist/layout.mjs && node --check dist/sculptures.mjs && node --check dist/visuals.mjs && node --check dist/signage.mjs && npm test"
   }
 }

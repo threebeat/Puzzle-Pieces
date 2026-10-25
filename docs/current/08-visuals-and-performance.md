@@ -1,6 +1,10 @@
-# Visuals and performance — revisions 0.2–0.3
+# Visuals and performance — revisions 0.2–0.4
 
 This pass improves the existing museum's finish while retaining the empty exhibit rooms and all opening navigation rules.
+
+## Counter and signage / 0.4
+
+The walk-in ring counter and mounted signage retain the existing lighting and quality settings. The single sign atlas reduces the complete scene to 42 meshes, 41 materials and 27 surface texture references; triangles total 134,472 (1.7% above revision 0.3). See [signage and wayfinding](09-signage-and-wayfinding.md) for the visual system, placement rules and text samples.
 
 ## Surface corrections / 0.3
 

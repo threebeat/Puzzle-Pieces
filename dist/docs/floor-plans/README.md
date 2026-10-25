@@ -2,13 +2,13 @@
 
 Both plans use a long north/south hall tilted 12° east of true north, a great window at the north/northeast end, a south/southwest stair, the same three exhibits, and separate west/east mezzanines. Dashed expansion bands are proposals, not current rooms. Room dimensions are schematic.
 
-## Current revision / 0.3
+## Current revision / 0.4
 
-The implemented hall is now 24 × 64 m, with a 5.8 m information counter and a rear return stair. Both floor drawings and the in-game visitor map use the updated dimensions. The stair section makes the turning landing and clear overhead space explicit.
+The implemented hall is now 24 × 64 m, with a 5.8 m ring information counter, open centre and 1.3 m west entrance and a rear return stair. Both floor drawings and the in-game visitor map use the updated dimensions. The stair section makes the turning landing and clear overhead space explicit.
 
-![Implemented ground floor — Option A, revision 0.3](option-a.svg)
+![Implemented ground floor — Option A, revision 0.4](option-a.svg)
 
-![Implemented mezzanine — Option A, revision 0.3](option-a-upper.svg)
+![Implemented mezzanine — Option A, revision 0.4](option-a-upper.svg)
 
 ![Rear return stair — plan and elevation](return-stair.svg)
 

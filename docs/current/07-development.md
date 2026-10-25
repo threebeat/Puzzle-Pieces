@@ -8,6 +8,7 @@
 | `dist/layout.mjs` | Stable room data, dimensions, openings, stair bounds, floor lookup |
 | `dist/world.mjs` | Procedural architecture, furniture, lighting, collision boxes, target selection |
 | `dist/visuals.mjs` | Shared material textures, detailed decorative geometry, fern models, reflection environment, quality presets |
+| `dist/signage.mjs` | Complete sign register, modern typography, atlas packing, mounting hardware and documentation painter |
 | `dist/sculptures.mjs` | Original procedural classical studies adapted from the legacy renderer; no puzzle code |
 | `dist/app.mjs` | Movement, inspection, map, monitor/lamp, save state, menus, ambience |
 | `dist/vendor/` | Self-hosted Three.js 0.170.0 and geometry utilities; MIT license included |

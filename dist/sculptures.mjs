@@ -73,7 +73,6 @@ export function sculpture(w,a){
    tapered(w,g,[.29,1.86,-.01],[.43,1.63,.07],.13,.095);ellipsoid(w,g,.43,1.59,.07,.10,.10,.09,'marble');
   }
  }
- const plaque=w.label(a.key,a.x,.37,a.z+.704,0);plaque.scale.set(.6,.6,.6);
  return g;
 }
 

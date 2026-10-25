@@ -43,7 +43,26 @@ export const PARTITIONS = [
  {x:-32,z:10,w:7,d:.3,y:4.5,h:3.2}
 ];
 export const HALL=ROOMS.find(r=>r.id==='hall');
-export const DESK={radius:2.7,topRadius:2.9,lampX:4.5,monitorZ:1.35};
+export const DESK={radius:2.7,innerRadius:1.75,topRadius:2.9,topInnerRadius:1.6,openingWidth:1.3,lampX:4.5,monitorZ:2.05};
+// One outline drives the counter mesh, collision, visitor map and author plans. Opening faces west.
+export function deskOutline(outer=DESK.topRadius,inner=DESK.topInnerRadius,segments=80){
+ const points=[],half=DESK.openingWidth/2;
+ for(const [r,reverse] of [[outer,false],[inner,true]]){
+  const a=Math.asin(half/r),start=Math.PI+a,end=3*Math.PI-a;
+  for(let i=0;i<=segments;i++){const t=reverse?1-i/segments:i/segments,angle=start+(end-start)*t;points.push([r*Math.cos(angle),r*Math.sin(angle)]);}
+ }
+ return points;
+}
+export function diskIntersectsPolygon(x,z,radius,points){
+ let inside=false;
+ for(let i=0,j=points.length-1;i<points.length;j=i++){
+  const [ax,az]=points[j],[bx,bz]=points[i],dx=bx-ax,dz=bz-az;
+  const t=Math.max(0,Math.min(1,((x-ax)*dx+(z-az)*dz)/(dx*dx+dz*dz)));
+  if(Math.hypot(x-ax-t*dx,z-az-t*dz)<radius)return true;
+  if((az>z)!==(bz>z)&&x<(bx-ax)*(z-az)/(bz-az)+ax)inside=!inside;
+ }
+ return inside;
+}
 // Two adjacent flights, clear of the mezzanine slab; their south ends share a turning landing.
 export const STAIR={x1:-11.6,x2:-4.4,z1:26,z2:35,top:4.5,mid:2.25,steps:15,
  flights:[

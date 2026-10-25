@@ -1,6 +1,8 @@
 # Puzzle Pieces — design notebook
 
-**Current milestone: 0.3 / the opening architecture.** Updated 24 October 2026.
+**Current milestone: 0.4 / the opening architecture.** Updated 25 October 2026.
+
+**Revision 0.4:** walk-in ring desk, clear northern arcade approach, and a modern mounted sign system. [Signage and wayfinding](current/09-signage-and-wayfinding.md).
 
 **Architecture revision 0.3:** wider hall, larger circular information desk, rear return stair, and shared wall/glass corrections. [View the current floor plans and stair section](current/02-architecture-and-rooms.md).
 
@@ -20,6 +22,7 @@ Puzzle Pieces is a web-based mystery museum in which art pieces become puzzles. 
 | [Decisions and backlog](current/06-decisions-and-backlog.md) | Assumptions, unresolved decisions, future ideas, and change history |
 | [Development guide](current/07-development.md) | Source structure, local use, testing, publishing, and update procedure |
 | [Visuals and performance](current/08-visuals-and-performance.md) | Material assets, lighting, model detail, quality settings, and measured budgets |
+| [Signage and wayfinding](current/09-signage-and-wayfinding.md) | Sign styles, mounts, desk entrance, circulation clearances and visual samples |
 | [Floor-plan options](floor-plans/README.md) | Two alternative layouts; Option A is the playable version |
 | [Puzzle design template](templates/puzzle-design.md) | A consistent record for future puzzles and exact solutions |
 | [Legacy archive](legacy/README.md) | Retired prototypes, their source provenance, puzzles, solutions, and unimplemented ideas |

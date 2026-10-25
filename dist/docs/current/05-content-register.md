@@ -11,13 +11,17 @@ The new exhibit rooms are intentionally empty. No puzzle or solution from the re
 | HO-1.03 | Hidden Operators, third room | Large empty shell | None |
 | DR-2.01 | Days of Rebirth, first room | Medium rectangular empty shell | None |
 | CH-3.01 | Cross/Hatch, first room | Very large empty shell; two display walls | None |
-| H-INFO | Hall monitor | Working information interface | Switches the connected lamp; opens visitor map |
+| H-INFO | Ring information desk and monitor | Walk-in employee centre, west opening, mounted monitor | Switches the connected lamp; opens visitor map |
 | H-LAMP | Hall street lamp | Wired device | On/off; saved locally; no gate |
 | H-SCULPTURE | A Space Held Open | Abstract bronze display study | None |
 | H-CLASSICAL-01–04 | Four classical studies | Greek-style procedural sculpture studies | None |
 | H-WALL-01–04 | Four wall studies | Original decorative abstract paintings | None |
 | N-MAP | Northern arcade map | Ground-floor orientation diagram | Opens the visitor map |
 | S-LIFTS-01–02 | Public elevators | Visible, inactive | Inspection explains service is suspended |
+
+## Signs and circulation fixtures
+
+The contemporary sign system covers exhibit entrances, room labels, arcade directions, amenities, access closures, collection captions and the visitor map. All signs have wall, plinth, counter, monitor or floor mounts. The northern arcade doorway plant has moved to the window end of the hall. See [signage and wayfinding](09-signage-and-wayfinding.md).
 
 ## Installing a first puzzle
 
