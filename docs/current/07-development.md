@@ -7,6 +7,7 @@
 | `dist/index.html` and `dist/style.css` | Menu, visitor HUD, touch controls, dialogs, responsive styling |
 | `dist/layout.mjs` | Stable room data, dimensions, openings, stair bounds, floor lookup |
 | `dist/world.mjs` | Procedural architecture, furniture, lighting, collision boxes, target selection |
+| `dist/visuals.mjs` | Shared material textures, detailed decorative geometry, fern models, reflection environment, quality presets |
 | `dist/sculptures.mjs` | Original procedural classical studies adapted from the legacy renderer; no puzzle code |
 | `dist/app.mjs` | Movement, inspection, map, monitor/lamp, save state, menus, ambience |
 | `dist/vendor/` | Self-hosted Three.js 0.170.0 and geometry utilities; MIT license included |
@@ -31,7 +32,7 @@ The app uses a new save key. If its schema changes incompatibly, version the key
 
 ## Rendering and accessibility
 
-The geometry is built procedurally. Static meshes sharing a material are merged to reduce draw calls; pixel ratio is capped at 1.5. One directional shadow map supplies daylight. The scene uses no external CDN, no image downloads, and no dynamic asset fetch beyond its own static files. Decorative artwork is original procedural artwork and carries no puzzle evidence.
+The geometry is built procedurally. Static meshes sharing a material and shadow flags are merged to reduce draw calls; pixel ratio is capped at 1.25 by default, with Economy and High options. One cached directional shadow map supplies daylight. Shared small textures and a one-time prefiltered environment add surface detail and reflections. The scene uses no external CDN, no image downloads, and no dynamic asset fetch beyond its own static files. Decorative artwork is original procedural artwork and carries no puzzle evidence. See [visuals and performance](08-visuals-and-performance.md) for budgets.
 
 Controls include keyboard, drag-to-look, touch joystick, visible inspection actions, text versions of entrance descriptions, and a map with quick visits to open rooms. Ambient audio is opt-in and not a clue. The layout is responsive; the 3D view requires WebGL. If WebGL is unavailable, an automatic Canvas 2D plan view preserves movement, physical collisions, stairs, floor changes, and interactions. The menu identifies this fallback. This milestone is not a fully nonvisual playable game.
 

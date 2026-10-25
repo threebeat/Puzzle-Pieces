@@ -2,6 +2,8 @@
 
 **Current milestone: 0.1 / the opening architecture.** Updated 24 October 2026.
 
+**Visual revision 0.2:** richer lighting and materials, more detailed fixtures and vegetation, cached shadows, and graphics-quality settings. See [visuals and performance](current/08-visuals-and-performance.md) for measured budgets and verification limits.
+
 Puzzle Pieces is a web-based mystery museum in which art pieces become puzzles. This milestone establishes the building, its orientation, and a durable design record. The five exhibit rooms are deliberately empty.
 
 ## Start here
@@ -15,6 +17,7 @@ Puzzle Pieces is a web-based mystery museum in which art pieces become puzzles. 
 | [Content register](current/05-content-register.md) | Current works and room status; no unapproved puzzle content |
 | [Decisions and backlog](current/06-decisions-and-backlog.md) | Assumptions, unresolved decisions, future ideas, and change history |
 | [Development guide](current/07-development.md) | Source structure, local use, testing, publishing, and update procedure |
+| [Visuals and performance](current/08-visuals-and-performance.md) | Material assets, lighting, model detail, quality settings, and measured budgets |
 | [Floor-plan options](floor-plans/README.md) | Two alternative layouts; Option A is the playable version |
 | [Puzzle design template](templates/puzzle-design.md) | A consistent record for future puzzles and exact solutions |
 | [Legacy archive](legacy/README.md) | Retired prototypes, their source provenance, puzzles, solutions, and unimplemented ideas |

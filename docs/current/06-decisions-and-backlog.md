@@ -48,4 +48,6 @@ The older tablet, redaction training, division gallery, map fragments, color mas
 
 ## Change log
 
+**0.2 — 24 October 2026:** Added shared surface textures, stone relief, soft environment reflections, corrected daylight shadow flags, detailed ferns and architectural fittings, and three graphics settings. Cached the static shadow map and reduced the batched scene from 85 to 69 meshes; triangle count increased 2.4%. Layout and empty exhibit scope are unchanged. Full 3D appearance and FPS remain unverified in the WebGL-disabled preview environment.
+
 **0.1 — 24 October 2026:** Established a separate new codebase and documentation structure; drafted two floor-plan options; selected Option A; built the main hall, arcades, two amenity shells, five gallery shells, and public west mezzanine; archived the two recovered prototypes and their solution data. Added movement, collision boundaries, map, local saves, optional ambience, and the wired lamp interaction.

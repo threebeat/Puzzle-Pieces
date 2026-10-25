@@ -4,6 +4,8 @@ A web-based puzzle game set in a mysterious museum where the art pieces are the 
 
 **Current milestone: 0.1 — the opening architecture.** The main hall, public arcades, west mezzanine, and five empty exhibit rooms are explorable. Actual exhibit puzzles will be designed in later iterations.
 
+**Visual revision 0.2:** improved lighting, textured materials, detailed ferns and architectural fixtures, and Economy / Balanced / High graphics settings. [Visual changes and measured performance budgets](docs/current/08-visuals-and-performance.md).
+
 - [Play online](https://puzzle-pieces-foundation.johnmoore2048.chatgpt.site)
 - [Read the design notebook online](https://puzzle-pieces-foundation.johnmoore2048.chatgpt.site/docs/)
 - [Documentation index](docs/README.md)
