@@ -1,6 +1,16 @@
-# Two opening floor-plan options
+# Floor plans — current building and alternative
 
 Both plans use a long north/south hall tilted 12° east of true north, a great window at the north/northeast end, a south/southwest stair, the same three exhibits, and separate west/east mezzanines. Dashed expansion bands are proposals, not current rooms. Room dimensions are schematic.
+
+## Current revision / 0.3
+
+The implemented hall is now 24 × 64 m, with a 5.8 m information counter and a rear return stair. Both floor drawings and the in-game visitor map use the updated dimensions. The stair section makes the turning landing and clear overhead space explicit.
+
+![Implemented ground floor — Option A, revision 0.3](option-a.svg)
+
+![Implemented mezzanine — Option A, revision 0.3](option-a-upper.svg)
+
+![Rear return stair — plan and elevation](return-stair.svg)
 
 ## Option A — the axial museum — implemented
 
@@ -26,7 +36,7 @@ Advantages: less retracing, more chances for cross-room sightlines and an exhibi
 | Expansion emphasis | North and northeast beyond Room 03 | West and northwest beyond the return wing |
 | Café relationship | Opposite first exhibit entrance | Opposite first exhibit entrance |
 | Days of Rebirth | West of south hall, opposite southern arcade | Same |
-| Upper access | South stair to west only | Same |
+| Upper access | Rear return stair to west only | Same |
 | Current implementation | Yes | No; design alternative |
 
 The plans distinguish open room shells, locked circulation, vertical circulation, fixtures, and future space. The upstairs plan is separate to avoid confusing the two overlapping floors.

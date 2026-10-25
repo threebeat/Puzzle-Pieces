@@ -1,5 +1,5 @@
 import * as T from './vendor/three.module.js';
-import {DOORS} from './layout.mjs';
+import {DOORS,DESK} from './layout.mjs';
 const PI=Math.PI;
 const random=seed=>()=>{seed=(Math.imul(seed,1664525)+1013904223)|0;return(seed>>>0)/4294967296;};
 function map(paint,size=256,data=false){const canvas=document.createElement('canvas');canvas.width=canvas.height=size;paint(canvas.getContext('2d'),size,random(2947));const t=new T.CanvasTexture(canvas);t.colorSpace=data?T.NoColorSpace:T.SRGBColorSpace;t.wrapS=t.wrapT=T.RepeatWrapping;t.anisotropy=2;return t;}
@@ -31,7 +31,7 @@ export function reflectionEnvironment(w){
 export function fern(w,x,z,y=0,scale=1){
  const g=new T.Group();g.position.set(x,y,z);g.scale.setScalar(scale);w.scene.add(g);
  w.mesh(new T.CylinderGeometry(.44,.31,.7,20),'pot',0,.35,0,g);w.mesh(new T.TorusGeometry(.43,.035,5,20),'limestone',0,.68,0,g).rotation.x=PI/2;w.mesh(new T.CylinderGeometry(.40,.40,.025,20),'dark',0,.69,0,g);
- // Six triangles per pointed, folded leaflet instead of twenty triangles per ellipsoid.
+ // Four triangles per pointed, folded leaflet instead of twenty triangles per ellipsoid.
  if(!w.leafGeometry){const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute([-.55,0,0,0,.19,0,.7,0,0,0,-.19,0,0,0,.055],3));geo.setAttribute('uv',new T.Float32BufferAttribute([0,.5,.45,1,1,.5,.45,0,.45,.5],2));geo.setIndex([0,1,4,1,2,4,2,3,4,3,0,4]);geo.computeVertexNormals();w.leafGeometry=geo;}
  for(let j=0;j<13;j++){const a=j*2.4,len=.85+(j%4)*.19;const points=[];for(let k=0;k<9;k++){const t=k/8,r=t*len,cy=.72+Math.sin(t*2.5)*(.8+(j%3)*.05);points.push(new T.Vector3(Math.cos(a)*r,cy,Math.sin(a)*r));if(k===0)continue;for(const side of [-1,1]){const leaf=w.mesh(w.leafGeometry,j%2?'leaf':'leaf2',Math.cos(a)*r+side*Math.sin(a)*.12,cy,Math.sin(a)*r-side*Math.cos(a)*.12,g);leaf.rotation.set(-PI/2+(t-.5)*.3,-a+side*.65,0);leaf.scale.setScalar(.48*(1-t*.72));}}w.mesh(new T.TubeGeometry(new T.CatmullRomCurve3(points),8,.008,3,false),'leaf2',0,0,0,g);}
  w.shadow(x,z,2.3,2.3,y+.012);w.colliders.push({x1:x-.46,x2:x+.46,z1:z-.46,z2:z+.46,y1:y,y2:y+.8});
@@ -43,19 +43,19 @@ export function details(w){
   else{for(const x of [d.from-.12,d.to+.12])w.box(x,y+h/2,d.at,.18,h,.53,'limestone');w.box(mid,y+h+.1,d.at,d.to-d.from+.42,.2,.53,'limestone');}
  }
  // Slender column flutes, collars and stepped capitals reuse the existing stone material.
- for(const side of [-1,1])for(const z of [-19,-12,12,26]){for(const yy of [.27,.38,3.76,3.88])w.cyl(side*6.5,yy,z,yy>3?.27:.25,.07,'marble');for(let k=0;k<12;k++){const a=k*PI/6;w.mesh(new T.CylinderGeometry(.012,.012,3.28,5),'marble',side*6.5+Math.cos(a)*.175,2.06,z+Math.sin(a)*.175);}w.box(side*6.5,4.22,z,.8,.1,.8,'limestone');}
+ for(const side of [-1,1])for(const z of [-19,-12,12,26]){for(const yy of [.27,.38,3.76,3.88])w.cyl(side*8.5,yy,z,yy>3?.27:.25,.07,'marble');for(let k=0;k<12;k++){const a=k*PI/6;w.mesh(new T.CylinderGeometry(.012,.012,3.28,5),'marble',side*8.5+Math.cos(a)*.175,2.06,z+Math.sin(a)*.175);}w.box(side*8.5,4.22,z,.8,.1,.8,'limestone');}
  // Fine desk fluting, a keyboard, paper brochures and a weighted pen stand.
- for(let k=0;k<64;k++){const a=k/64*PI*2;w.mesh(new T.CylinderGeometry(.014,.014,.9,5),'oak',Math.cos(a)*1.705,.66,Math.sin(a)*1.705);}
- w.box(0,1.315,.4,.68,.045,.25,'smokedMetal');for(let row=0;row<3;row++)for(let key=0;key<11;key++)w.box(-.29+key*.058,1.34,.32+row*.065,.046,.012,.045,'limestone');
- for(let i=0;i<3;i++){const b=w.box(-.9+i*.03,1.32+i*.014,.35,.5,.018,.7,i===2?'olive':'plaster');b.rotation.y=.15;}
- w.cyl(.9,1.31,.3,.14,.07,'brass');w.tube([[.9,1.34,.3],[.96,1.61,.3]],.014,'dark');
+ for(let k=0;k<64;k++){const a=k/64*PI*2;w.mesh(new T.CylinderGeometry(.014,.014,.9,5),'oak',Math.cos(a)*(DESK.radius+.005),.66,Math.sin(a)*(DESK.radius+.005));}
+ w.box(0,1.315,DESK.monitorZ+.67,.68,.045,.25,'smokedMetal');for(let row=0;row<3;row++)for(let key=0;key<11;key++)w.box(-.29+key*.058,1.34,DESK.monitorZ+.59+row*.065,.046,.012,.045,'limestone');
+ for(let i=0;i<3;i++){const b=w.box(-.9+i*.03,1.32+i*.014,DESK.monitorZ+.62,.5,.018,.7,i===2?'olive':'plaster');b.rotation.y=.15;}
+ w.cyl(.9,1.31,DESK.monitorZ+.57,.14,.07,'brass');w.tube([[.9,1.34,DESK.monitorZ+.57],[.96,1.61,DESK.monitorZ+.57]],.014,'dark');
  // Ring chandeliers gain concentric arms and frosted shades, without extra real-time lights.
  for(const z of [-16,-5,6,17]){const inner=w.mesh(new T.TorusGeometry(.75,.035,6,40),'brass',0,8.45,z);inner.rotation.x=PI/2;for(let k=0;k<8;k++){const a=k*PI/4;w.tube([[Math.cos(a)*.75,8.45,z+Math.sin(a)*.75],[Math.cos(a)*1.4,8.45,z+Math.sin(a)*1.4]],.025,'brass');w.mesh(new T.CylinderGeometry(.17,.23,.18,10),'limestone',Math.cos(a)*1.4,8.8,z+Math.sin(a)*1.4);}}
  // Decorative floor inlay stays clear of the passages.
  for(const x of [-5.35,5.35])w.box(x,.008,0,.055,.009,51,'brass');for(const z of [-20,13])w.box(0,.008,z,10.7,.009,.055,'brass');
  for(const z of [-21.7,-10.7,.3,11.3,22.3]){const m=w.mesh(new T.PlaneGeometry(5.8,7.2),'sunwash',.5,.017,z+.9);m.rotation.x=-PI/2;m.castShadow=false;}
  // Beaded picture frames and discreet gallery picture lamps.
- for(const side of [-1,1])for(const z of [-13,13]){w.box(side*9.64,3.83,z,.25,.10,1.65,'brass');w.box(side*9.5,3.76,z,.14,.055,1.4,'light');}
+ for(const side of [-1,1])for(const z of (side===-1?[-13,13]:[-13,-2])){w.box(side*11.64,3.83,z,.25,.10,1.65,'brass');w.box(side*11.5,3.76,z,.14,.055,1.4,'light');}
  // Layered landscaping beyond the window: tapered trunks and overlapping crowns.
  for(let i=0;i<14;i++){const x=(i-6.5)*5.2,z=-44-(i%4)*5;w.mesh(new T.CylinderGeometry(.1,.18,3.8,7),'oak',x,1.7,z);for(let k=0;k<3;k++)w.mesh(new T.ConeGeometry(1.2-k*.15,2.5,8),i%2?'leaf':'leaf2',x,2+k*1.25,z);}
 }

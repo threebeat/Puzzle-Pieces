@@ -2,7 +2,9 @@
 
 A web-based puzzle game set in a mysterious museum where the art pieces are the puzzles.
 
-**Current milestone: 0.1 — the opening architecture.** The main hall, public arcades, west mezzanine, and five empty exhibit rooms are explorable. Actual exhibit puzzles will be designed in later iterations.
+**Current milestone: 0.3 — the opening architecture.** The main hall, public arcades, west mezzanine, and five empty exhibit rooms are explorable. Actual exhibit puzzles will be designed in later iterations.
+
+**Architecture revision 0.3:** 24 × 64 m hall, 5.8 m information counter, rear return stair with turning landing, corrected shared walls and glazing. [Current floor plans and stair section](docs/current/02-architecture-and-rooms.md).
 
 **Visual revision 0.2:** improved lighting, textured materials, detailed ferns and architectural fixtures, and Economy / Balanced / High graphics settings. [Visual changes and measured performance budgets](docs/current/08-visuals-and-performance.md).
 

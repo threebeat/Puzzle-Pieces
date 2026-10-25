@@ -14,6 +14,7 @@
 | `docs/current/` | Source-of-truth design documents for this version |
 | `docs/legacy/` | Historical source snapshots and full-spoiler catalogue; never imported by the game |
 | `docs/floor-plans/` | Two author plans, visitor plans, and progression visual |
+| `scripts/stair-plan.mjs` | Stair plan and elevation generated from production dimensions |
 | `scripts/build-docs.mjs` | Regenerates plans and the public design notebook |
 | `tests/foundation.mjs` | Scope, navigation topology, ramp continuity, closed routes, document coverage |
 | `.openai/hosting.json` | Hosted Site identity and static deployment directory |
@@ -38,7 +39,7 @@ Controls include keyboard, drag-to-look, touch joystick, visible inspection acti
 
 ## Verification limits
 
-The managed preview browser reported WebGL disabled. Browser interaction and layout checks therefore run in the plan-view fallback. The actual production scene is also instantiated in a headless geometry test: every open threshold is traversed in both directions, the full stair is climbed and descended, closed gates and the mezzanine void are checked, spawn points are verified, and lamp switching is asserted. Visual quality and GPU performance of the 3D rendering still require checking on a WebGL-capable device. This is an environment limitation, not evidence of a 3D rendering failure.
+The managed preview browser reported WebGL disabled. Browser interaction and layout checks therefore run in the plan-view fallback. The actual production scene is also instantiated in a headless geometry test: every open threshold is traversed in both directions, the return stair is climbed and descended through the turning landing, mesh raycasts check overhead clearance, closed gates and the mezzanine void are checked, spawn points are verified, and lamp switching is asserted. Visual quality and GPU performance of the 3D rendering still require checking on a WebGL-capable device. This is an environment limitation, not evidence of a 3D rendering failure.
 
 ## Hosting and GitHub
 

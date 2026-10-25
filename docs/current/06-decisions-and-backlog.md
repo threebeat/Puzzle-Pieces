@@ -13,6 +13,9 @@ Solution markers, answer sheets, physical mechanisms, and cable-linked monitors 
 | Decision | Status / rationale |
 | --- | --- |
 | Later five-room list defines the milestone | Explicit detailed instruction supersedes earlier “1–2 rooms” shorthand |
+| Hall width 24 m; rear extended to 64 m total | Accommodates a 5.8 m circular counter and two-flight return stair |
+| Rear return stair with 2.25 m landing | User-requested correction; west slab ends before the stairwell |
+| Shared walls built once; glass uses single panes | Removes overlapping surfaces and avoids opaque-looking window shadows |
 | Hall bearing = 12° east of north | Proposed numerical interpretation of the requested slight tilt |
 | Option A is the playable plan | Preserves clear axial orientation and offers expansion bands |
 | Days of Rebirth west of the stair | Preserves “across from southern arcade”; resolves conflicting “left” wording |
@@ -47,6 +50,8 @@ Solution markers, answer sheets, physical mechanisms, and cable-linked monitors 
 The older tablet, redaction training, division gallery, map fragments, color masks, sound sequences, provenance audit, secret return passages, and dedication/narrative beats are archived. None are a current requirement. See the legacy catalogue before selecting material to reuse.
 
 ## Change log
+
+**0.3 — 24 October 2026:** Widened the hall from 20 to 24 m, extended its south end by 8 m, and enlarged the circular information counter to 5.8 m across. Replaced the straight stair beneath the mezzanine with two flights and a turning landing; preserved west-only access. Removed duplicate shared walls, replaced glass boxes with single non-shadow-receiving panes, moved artwork off the gift-shop window, and lowered the overlapping Days of Rebirth ceiling. Embedded updated ground/mezzanine floor plans and a stair section in the architecture document. Tests now cover the full stair turn, physical headroom, wall overlap, glazing, circular desk collision and monitor reach. Static scene remains 69 meshes, 132,264 triangles (0.7% above 0.2), and 55 referenced surface textures.
 
 **0.2 — 24 October 2026:** Added shared surface textures, stone relief, soft environment reflections, corrected daylight shadow flags, detailed ferns and architectural fittings, and three graphics settings. Cached the static shadow map and reduced the batched scene from 85 to 69 meshes; triangle count increased 2.4%. Layout and empty exhibit scope are unchanged. Full 3D appearance and FPS remain unverified in the WebGL-disabled preview environment.
 

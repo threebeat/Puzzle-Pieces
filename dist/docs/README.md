@@ -1,6 +1,8 @@
 # Puzzle Pieces — design notebook
 
-**Current milestone: 0.1 / the opening architecture.** Updated 24 October 2026.
+**Current milestone: 0.3 / the opening architecture.** Updated 24 October 2026.
+
+**Architecture revision 0.3:** wider hall, larger circular information desk, rear return stair, and shared wall/glass corrections. [View the current floor plans and stair section](current/02-architecture-and-rooms.md).
 
 **Visual revision 0.2:** richer lighting and materials, more detailed fixtures and vegetation, cached shadows, and graphics-quality settings. See [visuals and performance](current/08-visuals-and-performance.md) for measured budgets and verification limits.
 

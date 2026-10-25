@@ -1,6 +1,12 @@
-# Visuals and performance — revision 0.2
+# Visuals and performance — revisions 0.2–0.3
 
 This pass improves the existing museum's finish while retaining the empty exhibit rooms and all opening navigation rules.
+
+## Surface corrections / 0.3
+
+Shared room boundaries previously generated two coincident wall boxes, which could compete for the same depth pixels. The wall builder now unions each boundary into non-overlapping slabs and cuts door/window apertures once. The glazing uses one transparent double-sided sheet per opening, with no depth writes or received shadows; this avoids stacked glass faces and dark shadow patterns on clear panes. Decorative art has been moved off the gift-shop glazing. The Days of Rebirth ceiling now clears the Cross/Hatch floor above it.
+
+The scene remains at **69 meshes, 68 materials and 55 referenced surface textures** after the larger hall and return stair. The triangle count is **132,264**, 0.7% above revision 0.2 and within the existing 135,000 budget. No extra rendering passes or real-time lights were added. These corrections target confirmed geometry/material causes; the preview environment still cannot establish that every artifact reported on the user's GPU is gone.
 
 ## Lighting
 
@@ -47,6 +53,6 @@ All settings retain the same room content and geometry. No bloom, SSAO, real-tim
 
 ## Verification
 
-The regression suite checks every public threshold in both directions, stair ascent/descent, closed routes, upper-floor boundaries, lamp behavior, spawn points, and archive integrity. It also enforces budgets of 75 meshes, 135,000 triangles, and 60 referenced surface textures, tests quality selection, and checks that glazing and luminous panels do not cast opaque shadows.
+The regression suite checks every public threshold in both directions, two-flight stair ascent/descent and turning-landing headroom, duplicate wall prevention, glazing surfaces, desk interaction reach, closed routes, upper-floor boundaries, lamp behavior, spawn points, and archive integrity. It also enforces budgets of 75 meshes, 135,000 triangles, and 60 referenced surface textures, tests quality selection, and checks that glazing and luminous panels do not cast opaque shadows.
 
 The available preview browser has WebGL disabled. Its UI and fallback can be verified, but final 3D lighting, material appearance, and frame rate must be checked on a WebGL-capable device. No FPS claim is made from the headless checks.
